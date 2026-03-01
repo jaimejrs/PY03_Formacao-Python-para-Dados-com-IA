@@ -1,5 +1,4 @@
 estoque = {}
-
 print('Sistema de Estoque. Comandos: adicionar item qtd / remover item qtd / sair')
 
 while True:
@@ -24,7 +23,7 @@ while True:
             if estoque[item] == 0: del estoque[item]
             print(f'Restam {estoque.get(item, 0)} de {item}.')
         else:
-            print('Erro: Item não encontrado ou quantidade insuficiente.')
+            print('Item não encontrado ou quantidade insuficiente.')
     else:
         print('Comando desconhecido.')
 
