@@ -1,0 +1,7 @@
+psycopg2-binary
+mysql-connector-python
+python-dotenv
+pandas
+matplotlib
+pandas
+matplotlib
