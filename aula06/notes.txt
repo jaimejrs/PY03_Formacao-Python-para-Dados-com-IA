@@ -1,0 +1,20 @@
+PROCESSOS
+    ingestão: apache kafka, apache flume
+    processamento em lote: apache hadoop, apache spark
+    em tempo real: apache storm, apache spark streaming, apache flink
+    camada de armazenamento dos dados:
+        - estruturados: postgres, mysql
+        - n estruturado: mongodb, cassandra, habse
+        - data late: amazon s3, hdfs
+    camada de analise e modelagem de dados: hive, pig, ml/ia
+    camada de visualização dos dados: tableau, kibana, streamlit, power bi
+    infraestrutura de computação: on premises (clusters de servidores) ou cloud (aws, azure)
+    orquestração e gerenciamento: apache airflow, apache oozie
+    segurança e governança de dados: contre de acesso, encripitação, monitoramento e conformidade (GDPR,LGPD)
+
+- HADOOP 
+    - HDFS = Hadoop Distributed File System (divide os dados em blocos e distruibui entre nós do cluster) NameNode (master) e DataNode (worker)
+    - MapReduce = Modelo de programação para processamento paralelo e distruibuido (Map (Divide o problema em subproblemas menores e processa em paralelo) Reduce (Consolida os resultados processados do Map))
+    - YARN = Yet Another Resource Negotiatior (Coordena Alocação de recursos (CPU/RAM)) Node Manager (gerencia nó) Resource ( Gerencia o gerenciador de nós)
+    - Cluster Hadoop = Master Node e Slaves Nodes (Escalabilidade Horizontal)
+
