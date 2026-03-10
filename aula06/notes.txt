@@ -18,3 +18,4 @@ PROCESSOS
     - YARN = Yet Another Resource Negotiatior (Coordena Alocação de recursos (CPU/RAM)) Node Manager (gerencia nó) Resource ( Gerencia o gerenciador de nós)
     - Cluster Hadoop = Master Node e Slaves Nodes (Escalabilidade Horizontal)
 
+[Aula para instalação e configuração do Hadoop]
