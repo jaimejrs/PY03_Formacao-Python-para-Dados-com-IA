@@ -1,5 +1,3 @@
-Aqui está o arquivo Markdown consolidado com os comandos utilizados na sua atividade prática:
-
 # Exercícios de Manipulação de Dados no Hadoop
 
 ### 1. Enviar o Arquivo para o HDFS
