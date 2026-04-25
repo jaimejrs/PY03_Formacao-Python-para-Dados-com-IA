@@ -26,17 +26,26 @@ logger = logging.getLogger(__name__)
 # CONFIGURAÇÕES
 
 DB_CONFIG = {
-    
+    "host": os.getenv("POSTGRES_HOST", ""),
+    "database": os.getenv("POSTGRES_DATABASE", ""),
+    "user": os.getenv("POSTGRES_USER", ""),
+    "password": os.getenv("POSTGRES_PASSWORD", ""),
+    "port": os.getenv("POSTGRES_PORT", ""),
+}
+DATABASE_URL = os.getenv(
+    "DATABASE_URL",
+    "postgresql://neondb_owner:",
+)
 
 PNCP_BASE_URL = "https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao"
-UF_FILTRO = "MG"
+UF_FILTRO = "SE"
 CODIGO_MODALIDADE_CONTRATACAO = 1
 TAMANHO_PAG = 50
 DIAS_JANELA = 365
 PNCP_TIMEOUT = 90
 PNCP_MAX_TENTATIVAS = 3
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "COLE_SUA_CHAVE_OPENAI_AQUI")
 OPENAI_MODEL = "gpt-4o-mini"
 BATCH_SIZE = 10
 
@@ -47,10 +56,11 @@ CATEGORIAS = [
     "Serviços Gerais", "Outros",
 ]
 
-
 # HELPERS
 
 def get_db_connection():
+    if DATABASE_URL:
+        return psycopg2.connect(DATABASE_URL)
     return psycopg2.connect(**DB_CONFIG)
 
 
